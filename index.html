@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WiFi Password Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>📶 WiFi Password Generator</h1>
+
+        <p class="subtitle">
+            Create a strong and secure WiFi password
+        </p>
+
+        <div class="password-box">
+
+            <input
+                type="text"
+                id="password"
+                value="Click Generate"
+                readonly
+            >
+
+            <button id="copyBtn">📋</button>
+
+        </div>
+
+        <div class="options">
+
+            <label>
+                Password Length:
+                <span id="lengthValue">12</span>
+            </label>
+
+            <input
+                type="range"
+                id="length"
+                min="8"
+                max="30"
+                value="12"
+            >
+
+            <label>
+                <input type="checkbox" id="uppercase" checked>
+                Uppercase (A-Z)
+            </label>
+
+            <label>
+                <input type="checkbox" id="lowercase" checked>
+                Lowercase (a-z)
+            </label>
+
+            <label>
+                <input type="checkbox" id="numbers" checked>
+                Numbers (0-9)
+            </label>
+
+            <label>
+                <input type="checkbox" id="symbols" checked>
+                Symbols (!@#$)
+            </label>
+
+        </div>
+
+        <button class="generate-btn" id="generateBtn">
+            🔄 Generate Password
+        </button>
+
+        <p id="strength">
+            Password Strength: -
+        </p>
+
+        <p id="message"></p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
